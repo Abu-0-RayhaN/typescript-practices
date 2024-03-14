@@ -21,3 +21,45 @@ interface Bottle{
     type:number
 }
 // identityFour<Bottle>({})
+
+function setSearchProducts<T,>(products:T[]):T{
+    return products[0]
+
+}
+const getMoreSearchProducts=<T>(products:T[]):T[]=>{
+    return products
+}
+interface DataBase{
+    connection:string,
+    username:string,
+    password:string
+}
+
+function anohterFunction<T,U extends DataBase>(valOne:T,valTwo:U):object{
+    return{
+        valOne,
+        valTwo
+    }
+}
+
+anohterFunction(3,{connection:'as',username:'ag',password:'asg'})
+
+
+interface Quiz{
+    name:string,
+    type:string
+}
+interface Course{
+    name:string,
+    author:string,
+    subject:string
+}
+class Sellable<T>{
+    public cart:T[]=[]
+
+    addToCart(product:T){
+        this.cart.push(product)
+    }
+    
+
+}
