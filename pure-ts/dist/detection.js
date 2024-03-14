@@ -24,3 +24,48 @@ function printAll(strs) {
         }
     }
 }
+function isAdminAccount(account) {
+    if ("isAdmin" in account) {
+        return account.isAdmin;
+    }
+    return false;
+}
+new Date();
+function logValue(x) {
+    if (x instanceof Date) {
+        console.log(x.toUTCString());
+    }
+    else {
+        console.log(x.toUpperCase());
+    }
+}
+function isFish(pet) {
+    return pet.swim !== undefined;
+}
+function getFood(pet) {
+    if (isFish(pet)) {
+        pet;
+        return "fish food";
+    }
+    else {
+        pet;
+        return "bird food";
+    }
+}
+function getTrueShape(shape) {
+    if (shape.kind === "circle") {
+        return Math.PI * shape.radius ** 2;
+    }
+    return shape.side ** 2;
+}
+function getArea(shape) {
+    switch (shape.kind) {
+        case "circle":
+            return Math.PI * shape.radius ** 2;
+        case "squre":
+            return shape.side ** 2;
+        default:
+            const _defaultforshape = shape;
+            return _defaultforshape;
+    }
+}
